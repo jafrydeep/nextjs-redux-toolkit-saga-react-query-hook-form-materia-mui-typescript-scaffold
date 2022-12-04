@@ -14,7 +14,8 @@ export const getArticles = async ({ tag = 'react', page = 1 }:ArticleFilterParam
   try {
     const response = await axios.get(apiEndpoint);
 
-    return response.data;
+    return response.data;   
+      
   } catch (error) {
     consoleLog('🚀 ~ file: article-api.ts ~ line 46 ~ getArticles ~ apiEndpoint', apiEndpoint, error);
     if (axios.isAxiosError(error)) {
